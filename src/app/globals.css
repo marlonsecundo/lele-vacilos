@@ -24,4 +24,48 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  overflow: hidden;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+
+  overflow: hidden;
+}
+
+.content {
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+.img2 {
+  position: absolute;
+}
+
+.img3 {
+  position: absolute;
+
+  bottom: 0;
+
+  width: 30rem;
+
+  transform: translateY(290px);
+}
+
+.img4 {
+  position: absolute;
+
+  bottom: 0;
+
+  width: 20rem;
+
+  left: 0;
+
+  transform: rotate(45deg) translateY(60px);
 }

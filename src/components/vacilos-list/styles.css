@@ -1,0 +1,14 @@
+.vacilos-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  padding: 5rem;
+}
+
+.vacilos-list-container {
+  width: 100%;
+
+  justify-content: center;
+
+  flex-direction: column;
+}
