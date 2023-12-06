@@ -11,8 +11,12 @@ const VacilosList: React.FC = () => {
         <VaciloItem description="O RPG"></VaciloItem>
         <VaciloItem description="Não assistiu a ultima parte de Arcane"></VaciloItem>
         <VaciloItem description="Não terminou o jogo das cartas"></VaciloItem>
-        <VaciloItem description="Modo lobisomen"></VaciloItem>
+        <VaciloItem description="Mod lobisomen, no server de minecraft"></VaciloItem>
         <VaciloItem description="Não terminou o Yakuza Like a Dragon"></VaciloItem>
+        <VaciloItem
+          date="05/12/2023"
+          description="Não terminou bleach ainda"
+        ></VaciloItem>
       </ul>
     </section>
   );

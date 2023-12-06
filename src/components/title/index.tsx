@@ -1,10 +1,29 @@
+"use client";
+
 import React from "react";
 
+import music from "@/lele.mp3";
+
 import "./styles.css";
-// import { Container } from './styles';
+import { publicFolder } from "@/consts";
+import useSound from "use-sound";
 
 const Title: React.FC = () => {
-  return <div className="title">Vacilos de Lele</div>;
+  const [play] = useSound(music, { volume: 0.2 });
+
+  return (
+    <div className="flex  m-10">
+      <div className="title">Vacilos de Lele</div>
+      <button
+        className="bg-red-400 shadow rounded self-center p-5 flex justify-center items-center ml-5 flex-col"
+        type="button"
+        onClick={() => play()}
+      >
+        <img src={publicFolder + "/lele2.png"} className=" w-fit h-20"></img>
+        Escute a Musica de Lele
+      </button>
+    </div>
+  );
 };
 
 export default Title;

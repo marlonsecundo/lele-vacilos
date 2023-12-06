@@ -1,8 +1,8 @@
 import Background from "@/components/background";
 import VacilosList from "@/components/vacilos-list";
+import { publicFolder } from "@/consts";
 import Image from "next/image";
 
-const publicFolder = "https://marlonsecundo.github.io/lele-vacilos";
 export default function Home() {
   return (
     <main className="flex flex-1 bg-black">
@@ -18,7 +18,6 @@ export default function Home() {
         <VacilosList></VacilosList>
 
         <img src={publicFolder + "/lele1.png"} className="img1"></img>
-        <img src={publicFolder + "/lele2.png"} className="img2"></img>
         <img src={publicFolder + "/lele3.png"} className="img3"></img>
         <img src={publicFolder + "/lele4.png"} className="img4"></img>
       </section>
