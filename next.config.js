@@ -1,4 +1,6 @@
 module.exports = {
+  trailingSlash: true,
+  output: "export",
   webpack(config, options) {
     const { isServer } = options;
     config.module.rules.push({
