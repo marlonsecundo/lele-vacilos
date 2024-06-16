@@ -19,7 +19,7 @@ export default function Home() {
 
         <img src={publicFolder + "/lele1.png"} className="img1"></img>
         <img src={publicFolder + "/lele3.png"} className="img3"></img>
-        {/* <img src={publicFolder + "/lele4.png"} className="img4"></img> */}
+        <img src={publicFolder + "/lele4.png"} className="img4"></img>
       </section>
     </main>
   );

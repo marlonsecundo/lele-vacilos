@@ -7,7 +7,10 @@ const VacilosList: React.FC = () => {
     <section className="vacilos-list-container">
       <Title></Title>
 
-      <ul className="vacilos-list">
+      <ul
+        className="vacilos-list overflow-y-scroll"
+        style={{ maxHeight: "50vh" }}
+      >
         <VaciloItem description="O RPG"></VaciloItem>
         <VaciloItem description="Não assistiu a ultima parte de Arcane"></VaciloItem>
         <VaciloItem description="Não terminou o jogo das cartas"></VaciloItem>
