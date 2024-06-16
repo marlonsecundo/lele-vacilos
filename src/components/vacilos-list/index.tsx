@@ -17,10 +17,21 @@ const VacilosList: React.FC = () => {
           date="2022"
           description="Não terminou persona 5 royal, 5 horas de gameplay, nem do primeiro boss"
         ></VaciloItem>
-
+        <VaciloItem
+          date="2022"
+          description="Não terminou persona 5 royal, 5 horas de gameplay, nem do primeiro boss"
+        ></VaciloItem>
         <VaciloItem
           date="05/12/2023"
           description="Não terminou bleach ainda"
+        ></VaciloItem>
+        <VaciloItem
+          date="16/06/2024"
+          description="Não terminou frieren"
+        ></VaciloItem>
+        <VaciloItem
+          date="16/06/2024"
+          description="Fez o bad ending em omori"
         ></VaciloItem>
       </ul>
     </section>
