@@ -12,8 +12,8 @@ const Title: React.FC = () => {
   const [play] = useSound(music, { volume: 0.2 });
 
   return (
-    <div className="flex  m-10">
-      <div className="title">Vacilos de Lele</div>
+    <div className="flex m-10 flex-col md:flex-row md:mt-24">
+      <div className="title text-6xl mb-10">Vacilos de Lele</div>
       <button
         className="bg-red-400 shadow rounded self-center p-5 flex justify-center items-center ml-5 flex-col"
         type="button"

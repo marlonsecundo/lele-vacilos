@@ -14,12 +14,18 @@ export default function Home() {
       />
       <Background></Background>
 
-      <section className="content">
+      <section className="z-10 flex">
         <VacilosList></VacilosList>
 
         <img src={publicFolder + "/lele1.png"} className="img1"></img>
-        <img src={publicFolder + "/lele3.png"} className="img3"></img>
-        <img src={publicFolder + "/lele4.png"} className="img4"></img>
+        <img
+          src={publicFolder + "/lele3.png"}
+          className="absolute w-52 bottom-0 left-1/2 translate-y-20"
+        ></img>
+        <img
+          src={publicFolder + "/lele4.png"}
+          className="absolute w-52 bottom-0 left-0 "
+        ></img>
       </section>
     </main>
   );
