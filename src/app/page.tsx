@@ -1,9 +1,15 @@
+"use client";
+
 import Background from "@/components/background";
+import { Modal } from "@/components/modal";
 import VacilosList from "@/components/vacilos-list";
 import { publicFolder } from "@/consts";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Home() {
+  const [evidencias, setEvidencias] = useState<string[]>([]);
+
   return (
     <main className="flex flex-1 bg-black">
       <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,7 +21,7 @@ export default function Home() {
       <Background></Background>
 
       <section className="z-10 flex">
-        <VacilosList></VacilosList>
+        <VacilosList onEvidencia={(v) => setEvidencias(v)}></VacilosList>
 
         <img src={publicFolder + "/lele1.png"} className="img1"></img>
         <img
@@ -27,6 +33,12 @@ export default function Home() {
           className="absolute w-52 bottom-0 left-0 "
         ></img>
       </section>
+
+      <Modal
+        // evidencias={["jampa/jampa1.jpeg", "jampa/jampa2.jpeg"]}
+        evidencias={evidencias}
+        onClose={() => setEvidencias([])}
+      ></Modal>
     </main>
   );
 }

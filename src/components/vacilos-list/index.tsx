@@ -2,7 +2,12 @@ import React from "react";
 import "./styles.css";
 import VaciloItem from "./vacilo-item";
 import Title from "../title";
-const VacilosList: React.FC = () => {
+
+interface Props {
+  onEvidencia: (evidencias: string[]) => void;
+}
+
+const VacilosList: React.FC<Props> = ({ onEvidencia }) => {
   const vaciloItems = [
     { date: undefined, description: "O RPG" },
     { date: undefined, description: "Não assistiu a ultima parte de Arcane" },
@@ -22,7 +27,15 @@ const VacilosList: React.FC = () => {
     { date: "05/12/2023", description: "Não terminou bleach ainda" },
     { date: "16/06/2024", description: "Não terminou frieren" },
     { date: "16/06/2024", description: "Fez o bad ending em omori" },
-    { date: "30/07/2024", description: "Jogou RPG em jampa" },
+    {
+      date: "30/07/2024",
+      description: "Jogou RPG em jampa",
+      evidencias: ["jampa/jampa1.jpeg", "jampa/jampa2.jpeg"],
+    },
+    {
+      description:
+        "Avançou no sinal vermelho, entrou na via proibida e no meio da via proibida, fez um retorno proibidia e voltou na via normal na contra mão.",
+    },
   ];
 
   return (
@@ -35,9 +48,11 @@ const VacilosList: React.FC = () => {
       >
         {vaciloItems.reverse().map((v, i) => (
           <VaciloItem
+            onEvidencia={onEvidencia}
             key={i}
             description={v.description}
             date={v.date}
+            evidencias={v.evidencias}
           ></VaciloItem>
         ))}
       </ul>
