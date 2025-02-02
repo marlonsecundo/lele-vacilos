@@ -34,7 +34,7 @@ export const Remdeptions: React.FC<Props> = ({ onEvidencia, onBack }) => {
         }}
       >
         {redemptions.reverse().map((v, i) => (
-          <div className="h-20">
+          <div className="h-20" key={i + "askjdisaj"}>
             <VaciloItem
               color={v.color}
               onEvidencia={onEvidencia}
