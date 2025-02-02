@@ -1,4 +1,5 @@
 import React from "react";
+import { twMerge } from "tailwind-merge";
 
 interface Props {
   imageSrc?: string;
@@ -6,6 +7,7 @@ interface Props {
   date?: string;
   evidencias?: string[];
   onEvidencia: (evidencias: string[]) => void;
+  color?: string;
 }
 
 import "./styles.css";
@@ -16,9 +18,10 @@ const VaciloItem: React.FC<Props> = ({
   date,
   evidencias,
   onEvidencia,
+  color = "",
 }) => {
   return (
-    <div className="item-container bg-white bg-opacity-20">
+    <div className={twMerge("item-container bg-white bg-opacity-20", color)}>
       {date && <p>{date}</p>}
       {imageSrc && <img src="" />}
       <p className="font-semibold item-description">{description}</p>

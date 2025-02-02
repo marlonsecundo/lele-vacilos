@@ -32,4 +32,6 @@ main {
   height: 100vh;
 
   overflow: hidden;
+
+  cursor: url("/mouse1.png"), auto !important;
 }

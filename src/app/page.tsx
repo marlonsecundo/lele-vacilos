@@ -4,11 +4,13 @@ import Background from "@/components/background";
 import { Modal } from "@/components/modal";
 import VacilosList from "@/components/vacilos-list";
 import { publicFolder } from "@/consts";
+import { Remdeptions } from "@/views/remdeptions.view";
 import Image from "next/image";
 import { useState } from "react";
 
 export default function Home() {
   const [evidencias, setEvidencias] = useState<string[]>([]);
+  const [showRendemptions, setShowRedemptions] = useState(false);
 
   return (
     <main className="flex flex-1 bg-black">
@@ -21,7 +23,10 @@ export default function Home() {
       <Background></Background>
 
       <section className="z-10 flex">
-        <VacilosList onEvidencia={(v) => setEvidencias(v)}></VacilosList>
+        <VacilosList
+          onShowRen={() => setShowRedemptions(true)}
+          onEvidencia={(v) => setEvidencias(v)}
+        ></VacilosList>
 
         <img src={publicFolder + "/lele1.png"} className="img1"></img>
         <img
@@ -33,6 +38,13 @@ export default function Home() {
           className="absolute w-52 bottom-0 left-0 "
         ></img>
       </section>
+
+      {showRendemptions && (
+        <Remdeptions
+          onBack={() => setShowRedemptions(false)}
+          onEvidencia={(v) => setEvidencias(v)}
+        ></Remdeptions>
+      )}
 
       <Modal
         // evidencias={["jampa/jampa1.jpeg", "jampa/jampa2.jpeg"]}

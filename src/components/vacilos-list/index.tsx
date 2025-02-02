@@ -5,9 +5,10 @@ import Title from "../title";
 
 interface Props {
   onEvidencia: (evidencias: string[]) => void;
+  onShowRen: () => void;
 }
 
-const VacilosList: React.FC<Props> = ({ onEvidencia }) => {
+const VacilosList: React.FC<Props> = ({ onEvidencia, onShowRen }) => {
   const vaciloItems = [
     { date: undefined, description: "O RPG" },
     { date: undefined, description: "Não assistiu a ultima parte de Arcane" },
@@ -36,11 +37,29 @@ const VacilosList: React.FC<Props> = ({ onEvidencia }) => {
       description:
         "Avançou no sinal vermelho, entrou na via proibida e no meio da via proibida, fez um retorno proibidia e voltou na via normal na contra mão.",
     },
+    {
+      description: "Dropou metaphor depois de 70h de jogo",
+      color: "bg-red-600",
+      evidencias: [
+        "metaphor/cobra.png",
+        "metaphor/prota.webp",
+        "metaphor/horas.webp",
+      ],
+    },
   ];
 
   return (
     <section className="vacilos-list-container">
-      <Title></Title>
+      <div className="flex items-center">
+        <Title></Title>
+        <button
+          className="bg-green-700 p-5 shadow rounded h-auto"
+          onClick={() => onShowRen()}
+        >
+          <p>Mas Lele também </p>
+          <p>tem suas redenções...</p>
+        </button>
+      </div>
 
       <ul
         className="vacilos-list overflow-y-scroll"
@@ -48,6 +67,7 @@ const VacilosList: React.FC<Props> = ({ onEvidencia }) => {
       >
         {vaciloItems.reverse().map((v, i) => (
           <VaciloItem
+            color={v.color}
             onEvidencia={onEvidencia}
             key={i}
             description={v.description}
